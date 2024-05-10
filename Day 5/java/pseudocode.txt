@@ -1,0 +1,9 @@
+declare an array
+
+create a method that takes in a string 
+take in 16 input
+
+return true if the card number is valid 
+
+return false if its otherwise
+
