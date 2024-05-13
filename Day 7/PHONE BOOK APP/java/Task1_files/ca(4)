@@ -1,0 +1,8 @@
+var TEAD={getParamByName:function(b,a){b=b.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");var d=new RegExp("[\\?&]"+b+"=([^&#]*)");
+var c=d.exec(a);if(c==null){return""}else{return decodeURIComponent(c[1].replace(/\+/g," "))}}};TEAD.baseURL=((window.location.protocol=="http:")?"https://choices.trustarc.com/":"https://choices.trustarc.com/".replace("http:","https:"))+"ca?aid=xandr01&pid=xandr01&sz=300x250&c=921079309&cid=3165206_24954675_446892953&language=en&sid=_LBsidLB_";
+TEAD.initParameterMap=function(d,e){if(d==null){e._query=e._url=""}else{var b,a=e._url=d.src||e._url;
+a=(e._query=a.replace(/^[^;?#]*[;?#]/,"").replace(/&(amp|#38|#x00026);/ig,"&").replace(/&(equals|#61|#x0003d);/ig,"=").replace(/&(semi|#59|#x0003b);/ig,";")).replace(/[#;?]|&(num|#35|#x00023|quest|#63|#x0003f);/ig,"&");
+if(a){for(a=a.split("&"),b=a.length;b-->0;){var c=a[b].split("=");e[String(c.shift()).toLowerCase()]=c.length?c.join("="):""
+}}}return e};TEAD.getCont=function(){return TEAD.getParamByName("c",TEAD.baseURL)};TEAD.getExtraParams=function(){var a="";
+var b=document.currentScript;if(b){var d={};d=TEAD.initParameterMap(b,d);if(d){a="ca?";for(var c in d){if(c!="_query"&&c!="_url"&&c!="js"){a+=(a!="ca?")?"&":"";
+a+=c+"="+d[c]}}}}return a};document.write('<span id="te-clearads-js-'+TEAD.getCont()+'"><script type="text/javascript" src="'+TEAD.baseURL+TEAD.getExtraParams()+'"><\/script></span>');
