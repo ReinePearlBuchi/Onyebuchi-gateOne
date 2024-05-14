@@ -21,7 +21,6 @@ public class Mbti{
 			switch(i){
 				case 1 ->
 				
-			}
 		}
 	
 	}
@@ -36,8 +35,8 @@ public class Mbti{
 		}
 
 		if(countA2 > countB2){
-			System.out.print("S");	
-		
+			System.out.print("S");
+		}	
 		else{
 			System.out.print("N");
 		}
@@ -54,9 +53,13 @@ public class Mbti{
 			System.out.print("P");
 		}
 
-
 	}
-		
+	
+
 }
+
+
+		
+
 	
 	
