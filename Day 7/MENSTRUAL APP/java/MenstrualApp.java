@@ -1,3 +1,4 @@
+
 import java.time.LocalDateTime;
 import java.util.Scanner;
 	public class MenstrualApp{
@@ -5,9 +6,31 @@ import java.util.Scanner;
 
 
 		Scanner scanner = new Scanner(System.in);
+		Localt
 		
 		System.out.print("Welcome to Red Robot Calendar! \n What is your Name? ");
 		String userinput = scanner.nextLine();
+
+		System.out.print("Your are here cause you are either pregnant or scared of been pregnant, if its the former i cant help you, im sorry, but if otherwise please go on");
+		System.out.println("Saving" + ">".repeat(20));	
+		System.out.println("Saved Successfully");
+	
+		System.out.print("when was your last cycle?");
+		int lastCycleDate = scanner.nextInt();
+
+		System.out.print("How many days did you have your last period for? ");
+		int lastPeriod = scanner.nextInt();
+
+		
+
+		System.out.print("")
+
+		System.out.print("")
+
+
+
+		
+
 
 		System.out.print("Hi!" + userinput );
 
@@ -36,10 +59,7 @@ import java.util.Scanner;
 			System.out.println("Saved Successfully");
 		
 		
-		System.out.println("Saving" + ">".repeat(20));
-			System.out.println("Saved Successfully");
-
-
+		
 
 
 
