@@ -1,76 +1,57 @@
-
-import java.time.LocalDateTime;
+import java.time.LocalDate;
 import java.util.Scanner;
 	public class MenstrualApp{
+
+		private static Scanner scanner = new Scanner(System.in);
+
+		
 		public static void main(String[] args){
-
-
-		Scanner scanner = new Scanner(System.in);
-		Localt
 		
-		System.out.print("Welcome to Red Robot Calendar! \n What is your Name? ");
-		String userinput = scanner.nextLine();
+		System.out.print("Welcome to Red Robot Calendar!");
 
-		System.out.print("Your are here cause you are either pregnant or scared of been pregnant, if its the former i cant help you, im sorry, but if otherwise please go on");
-		System.out.println("Saving" + ">".repeat(20));	
-		System.out.println("Saved Successfully");
+		
+		System.out.print("when was your last cycle (YYYY-MM-DD) ? ");
+		String lastCycleInput = scanner.nextLine();
+		LocalDate lastCycleDate = LocalDate.parse(lastCycleInput);
+
+		System.out.print("What is the average length of your period:  ");
+		int averageLengthOfPeriod = scanner.nextInt();
+
+		LocalDate nextCycleDate = calculateNextCycle(lastCycleDate, averageLengthOfPeriod);
+		LocalDate ovulationDate = calculateOvulationDate(lastCycleDate, averageLengthOfPeriod);
+		LocalDate safePeriodStartDate = calculateSafePeriodStartDate( lastCycleDate);
+		LocalDate  safePeriodEndDate = calculateSafePeriodEndDate(ovulationDate);
+		
+		System.out.println("");
+		System.out.println("Your next period is expected around: " + nextCycleDate);
+		System.out.println("");
+		System.out.println("Your estimated ovulation date is: " + ovulationDate);
+		System.out.println("");
+		System.out.println("Your estimated safe period is from " + safePeriodStartDate +  " to " + safePeriodEndDate);
+
+	}
 	
-		System.out.print("when was your last cycle?");
-		int lastCycleDate = scanner.nextInt();
+		public static LocalDate calculateNextCycle(LocalDate lastCycleDate, int averageLengthOfPeriod){
+			return lastCycleDate.plusDays(averageLengthOfPeriod);
 
-		System.out.print("How many days did you have your last period for? ");
-		int lastPeriod = scanner.nextInt();
-
-		
-
-		System.out.print("")
-
-		System.out.print("")
-
-
-
-		
-
-
-		System.out.print("Hi!" + userinput );
-
-		String prompt = """
-		\nDescribe how you are feeling today
-		"1" -> Bright and Cheery
-		"2" -> Grumpy and jumpy
-		"3" -> In sifia pain
-		""";
-	
-		Switch (prompt) {
-		case 1 :
-		System.out.print( "Bright and Cheery");
-		break ;
-		case 2 :
-		System.out.print( "Grumpy and jumpy");
-		break ;
-		case 3 :
-		System.out.print( "In sifia pain");
-		break ;
-		default :
-		System.out.print( "Invalid Input");
 		}
 
-		System.out.println("Saving" + ">".repeat(20));
-			System.out.println("Saved Successfully");
-		
-		
-		
+		public static LocalDate calculateOvulationDate(LocalDate lastCycleDate, int averageLengthOfPeriod){
+			return lastCycleDate.plusDays(averageLengthOfPeriod / 2);
 
+		}
 
-
+		public static LocalDate calculateSafePeriodStartDate(LocalDate lastCycleDate){
+			return lastCycleDate.plusDays(7);
 
 		}
 		
-
-		
-			}
+		public static LocalDate calculateSafePeriodEndDate(LocalDate lastCycleDate){
+			return lastCycleDate.minusDays(10);
 
 		}
+
+}
 
 
 

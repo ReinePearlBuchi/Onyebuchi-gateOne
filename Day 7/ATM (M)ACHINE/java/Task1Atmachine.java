@@ -4,7 +4,6 @@ import java.util.Scanner;
 		private static int amountDeposit;
 
 		public static void main(String[] args){
-		
 
 		Scanner scanner = new Scanner(System. in);
 
@@ -39,7 +38,7 @@ import java.util.Scanner;
 		String closeAccount = scanner.nextLine();
 
 	
-		System.out.println("What are your reasons why? ");
+		System.out.println("What are your reasons for closure? ");
 		String reasonForClosure = scanner.nextLine();
 
 
@@ -55,13 +54,15 @@ import java.util.Scanner;
 
 			System.out.print("How much would you like to deposit?  Enter Amount:  ");
 			int amountDeposit = scanner.nextInt();
-			deposit(amountDeposit);
+			int newBalance = deposit(amountDeposit);
 
 			System.out.print("Savings or Current account");
 			String typeOfAccount = scanner.nextLine();
 
 			System.out.println("Transaction Successful");
 			System.out.println("Saving" + ">".repeat(20));
+
+			System.out.println("Your new balance is now: " + newBalance);
 
 		break;
 
@@ -79,7 +80,7 @@ import java.util.Scanner;
 
 
 		case 4:
-			System.out.print("The balance of your account is"  + amountDeposit  );
+//			System.out.print("The balance of your account is"  + amountDeposit );
 
 
 		break;
@@ -122,7 +123,7 @@ import java.util.Scanner;
 			int amount = 0;
 			 balance = 0;
 
-			 return balance + amount;
+			 return balance + num1;
 			
 
 		}
