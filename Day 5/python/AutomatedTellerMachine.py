@@ -3,8 +3,10 @@ b = int(input("Enter a four digit number"))
 c = int(input("Enter a four digit number"))
 d = int(input("Enter a four digit number"))
 
-if a == 1234
-	return number
+userInput = a,b,c,d
+
+if userInput != 1 || 9
+	return false
 
 
 

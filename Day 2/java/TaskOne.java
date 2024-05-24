@@ -29,3 +29,33 @@ public class TaskOne{
 
 
 }
+
+public class Functions{
+	
+	public static void main(String[] args){
+	int[] scores = {5,6,9,13,66,97,34,76,40,28};
+
+	//printVertically(scores);
+	printHorizontally(scores);
+	
+	}
+
+	// Vertical	
+	public static void printVertically(int[] numbers){
+		for(int i = 0; i < numbers.length; i++){
+			System.out.println(numbers[i]);			
+		}	
+	}
+
+	// horizontal
+	public static void printHorizontally(int[] numbers){
+		for(int i = 0; i < numbers.length; i++){
+			System.out.print(numbers[i] + ", ");			
+		}
+	
+	}
+
+	
+
+
+}		

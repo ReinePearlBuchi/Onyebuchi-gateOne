@@ -48,7 +48,7 @@ import java.util.Scanner;
 	number = specialNumber.nextInt();
 	}
 	
-	while(number < = 0);
+	while(specialNumber < = 0);
 	System.out.println(True this number is valid);
 
 

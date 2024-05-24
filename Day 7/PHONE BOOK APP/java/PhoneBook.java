@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 		Scanner scanner = new Scanner(System.in)
 	
-		System.out.print("Insert Name");
+		System.out.print("Insert  Name");
 		String name = scanner.nextLine(;
 
 		System.out.println("Insert Address");
@@ -24,7 +24,10 @@ import java.util.Scanner;
 			String email = scanner.nextLine();
 
 
+		public static int contactName(int number){
 
+
+}
 
 	
 		}
